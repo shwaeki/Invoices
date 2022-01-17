@@ -1,5 +1,5 @@
 {
-    "name": "consoletvs/invoices",
+    "name": "shwaeki/invoices",
     "description": "Generate PDF invoices for your customers in laravel",
     "type": "library",
     "keywords": [
@@ -18,6 +18,10 @@
         {
             "name": "Erik Campobadal",
             "email": "ConsoleTVs@gmail.com"
+        },    
+		{
+            "name": "Mohamad shwaeki ",
+            "email": "shwaeki@gmail.com"
         }
     ],
     "autoload": {
