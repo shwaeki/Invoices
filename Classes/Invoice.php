@@ -269,7 +269,7 @@ class Invoice
      *
      * @return int
      */
-    private function subTotalPrice()
+    public function subTotalPrice()
     {
         return $this->items->sum(function ($item) {
             return bcmul($item['price'], $item['ammount'], $this->decimals);
@@ -319,7 +319,7 @@ class Invoice
      *
      * @return float
      */
-    private function taxPrice(Object $tax_rate = null)
+    public function taxPrice(Object $tax_rate = null)
     {
         if (is_null($tax_rate)) {
             $tax_total = 0;
@@ -332,7 +332,7 @@ class Invoice
             }
             return $tax_total;
         }
-        
+
         if ($tax_rate->tax_type == 'percentage') {
             return bcdiv(bcmul($tax_rate->tax, $this->subTotalPrice(), $this->decimals), 100, $this->decimals);
         }
@@ -416,7 +416,7 @@ class Invoice
     /**
      * Return true/false if one item contains image.
      * Determine if we should display or not the image column on the invoice.
-     * 
+     *
      * @method shouldDisplayImageColumn
      *
      * @return boolean
