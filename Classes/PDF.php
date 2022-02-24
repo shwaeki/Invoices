@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\View;
 use Meneses\LaravelMpdf\Facades\LaravelMpdf as MPDF;
 
 
-class PDF
+class PDFArabic
 {
 
     public static function generate(Invoice $invoice, $template = 'default')
