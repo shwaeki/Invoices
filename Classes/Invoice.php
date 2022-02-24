@@ -295,7 +295,7 @@ class Invoice
      *
      * @return int
      */
-    private function totalPrice()
+    public function totalPrice()
     {
         return bcadd($this->subTotalPrice(), $this->taxPrice(), $this->decimals);
     }
@@ -361,7 +361,7 @@ class Invoice
      */
     private function generate()
     {
-        $this->pdf = PDF::generate($this, $this->template);
+        $this->pdf = PDFArabic::generate($this, $this->template);
 
         return $this;
     }
